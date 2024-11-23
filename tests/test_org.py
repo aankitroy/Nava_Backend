@@ -62,7 +62,7 @@ def test_get_organization_access_forbidden():
     
     client.post("/create", json={"organization_name": "TestOrg", "email": "super_admin@gmail.com"}, headers=headers)
     # Try to access the organization with a different admin
-    another_admin_token = create_access_token(data={"sub": "new_admin@example.com"}, expires_delta=timedelta(minutes=15))
+    another_admin_token = create_access_token(data={"sub": "first_admin@gmail.com"}, expires_delta=timedelta(minutes=15))
     headers = {"Authorization": f"Bearer {another_admin_token}"}
 
     with pytest.raises(HTTPException) as exc_info:

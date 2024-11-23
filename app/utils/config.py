@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     ALGORITHM: ClassVar[str] = "HS256"
     JWT_SECRET_KEY: ClassVar[str] = os.environ['JWT_SECRET_KEY']     # should be kept secret
     JWT_REFRESH_SECRET_KEY: ClassVar[str] = os.environ['JWT_REFRESH_SECRET_KEY']      # should be kept secret
+    SUPER_ADMIN_PASSWORD: ClassVar[str] = os.environ['SUPER_ADMIN_PASSWORD']
+    FIRST_ADMIN_PASSWORD: ClassVar[str] = os.environ['FIRST_ADMIN_PASSWORD']
 
     
 settings = Settings()

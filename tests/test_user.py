@@ -28,7 +28,7 @@ def setup_and_teardown():
 def test_admin_login_success():
     response = client.post(
         "/login",
-        data={"username": "super_admin@gmail.com", "password": "q~S$H7e;i\"vC"}
+        data={"username": "super_admin@gmail.com", "password": settings.SUPER_ADMIN_PASSWORD}
     )
     assert response.status_code == 200
     assert "access_token" in response.json()
