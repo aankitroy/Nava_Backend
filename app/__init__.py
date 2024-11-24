@@ -16,7 +16,7 @@ def create_super_admin():
             "role": "super_admin"
         })
         save_master_db(master_db)
-        print(f"Super admin created with username 'super_admin' and password '{super_admin_password}'")
+        print(f"Super admin created with username 'super_admin'")
 
 def create_admin_via_super_admin(super_admin_email: str, admin_email: str):
     if any(user.get("email") == super_admin_email and user.get("role") == "super_admin" for user in master_db["users"]):
@@ -28,7 +28,7 @@ def create_admin_via_super_admin(super_admin_email: str, admin_email: str):
                 "role": "admin"
             })
             save_master_db(master_db)
-            print(f"Admin created with email '{admin_email}' and password '{admin_password}'")
+            print(f"Admin created with email '{admin_email}'")
     else:
         print("Super admin authentication failed. Cannot create admin.")
 
