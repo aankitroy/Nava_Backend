@@ -57,6 +57,8 @@ These accounts are created to facilitate initial access and management of the ap
    ```env
    JWT_SECRET_KEY=your_jwt_secret_key
    JWT_REFRESH_SECRET_KEY=your_jwt_refresh_secret_key
+   SUPER_ADMIN_PASSWORD=your_super_admin_password
+   FIRST_ADMIN_PASSWORD=your_first_admin_password
    ```
 
 ### Running the Application
