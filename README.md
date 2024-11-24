@@ -31,13 +31,14 @@ These accounts are created to facilitate initial access and management of the ap
 
 - Python 3.8+
 - [Poetry](https://python-poetry.org/) for dependency management
+- Docker for containerization
 
 ### Installation
 
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
+   git clone https://github.com/aankitroy/Nava_Backend
    cd your-repo
    ```
 
@@ -79,6 +80,22 @@ These accounts are created to facilitate initial access and management of the ap
 3. **Access the API Documentation**
 
    Visit `http://127.0.0.1:8000/docs` to access the interactive API documentation provided by Swagger UI.
+
+### Running the Application with Docker
+
+1. **Build the Docker Image**
+
+   ```bash
+   docker build -t nava-backend .
+   ```
+
+2. **Run the Docker Container**
+
+   ```bash
+   docker run -d -p 8000:8000 --env-file .env nava-backend
+   ```
+
+   The application will be available at `http://127.0.0.1:8000`.
 
 ### Testing
 
