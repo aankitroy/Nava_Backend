@@ -1,19 +1,45 @@
 [tool.poetry]
 name = "nava-backend"
 version = "0.1.0"
-description = ""
+description = "nava-backend"
 authors = ["Aankit Roy <aankitroy1990@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
 
-fastapi = "^0.68.0"
-pydantic = "^1.8.2"
+python = "^3.11"
+fastapi = "0.115.5"
+pydantic = "2.10.1"
 pytest = "^6.2.4"
 pytest-cov = "^2.12.1"
-uvicorn = "^0.15.0"
+uvicorn = "0.32.1"
+python-dotenv = "1.0.1"
+pydantic-settings = "2.6.1"
+annotated-types = "0.7.0"
+anyio = "4.6.2.post1"
+cffi = "1.17.1"
+click = "8.1.7"
+cryptography = "43.0.3"
+dnspython = "2.7.0"
+ecdsa = "0.19.0"
+email-validator = "2.2.0"
+h11 = "0.14.0"
+idna = "3.10"
+jose = "1.0.0"
+jwcrypto = "1.5.6"
+pyasn1 = "0.6.1"
+pycparser = "2.22"
+pycryptodome = "3.21.0"
+pydantic-core = "2.27.1"
+python-jose = "3.3.0"
+python-jwt = "4.1.0"
+python-multipart = "0.0.17"
+rsa = "4.9"
+six = "1.16.0"
+sniffio = "1.3.1"
+starlette = "0.41.3"
+typing-extensions = "4.12.2"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

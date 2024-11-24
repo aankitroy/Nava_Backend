@@ -8,10 +8,10 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock ./
 
 # Install Poetry
-RUN pip install poetry
+RUN pip install poetry && poetry --version
 
 # Install the dependencies
-RUN poetry config virtualenvs.create false && poetry install --no-dev
+RUN poetry config virtualenvs.create false && poetry install --no-dev --verbose
 
 # Copy the rest of the application code into the container
 COPY . .
